@@ -1,0 +1,22 @@
+    <!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+  <div class="container d-flex align-items-center">
+
+    <h1 class="logo mr-auto">Test_Ltd</h1>
+
+    <nav class="nav-menu d-none d-lg-block">
+      <ul>
+        <!-- Set the active item in the navigation menu -->
+        <li [routerLink]="['/']"><a [routerLinkActive]="['link-active']">{{sRouteNames[0]}}</a></li>
+        <li [routerLink]="['/About']"><a [routerLinkActive]="['link-active']">{{sRouteNames[1]}}</a></li>
+        <li [routerLink]="['/Menu']"><a [routerLinkActive]="['link-active']">{{sRouteNames[2]}}</a></li>
+        <li [routerLink]="['/Specials']"><a [routerLinkActive]="['link-active']">{{sRouteNames[3]}}</a></li>
+        <li [routerLink]="['/Gallery']"><a [routerLinkActive]="['link-active']">{{sRouteNames[5]}}</a></li>
+        <li [routerLink]="['/Chefs']"><a [routerLinkActive]="['link-active']">{{sRouteNames[6]}}</a></li>
+        <li [routerLink]="['/Contact']"><a [routerLinkActive]="['link-active']">{{sRouteNames[7]}}</a></li>
+        <li [routerLink]="['/Booking']" class="book-a-table text-center"><a [routerLinkActive]="['link-active']">{{sRouteNames[8]}}</a></li>
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </div>
+</header><!-- End Header -->

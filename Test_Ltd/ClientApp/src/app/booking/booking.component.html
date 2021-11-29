@@ -1,0 +1,99 @@
+<!-- ======= Book A Table Section ======= -->
+<section id="book-a-table" class="book-a-table">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Reservation</h2>
+      <p>Book a Table</p>
+    </div>
+
+    <form #booking="ngForm" (ngSubmit)="BookingCreate()" method="post" role="form" class="php-email-form" novalidate>
+      <div class="form-row">
+        <div class="col-lg-4 col-md-6 form-group">
+          <input type="text" class="form-control" name="FullName" id="name" placeholder="Your Name"
+                 [(ngModel)]="BookingItem.FullName" #FullName="ngModel" required
+                 minlength="6" maxlength="200" />
+          <div class="validate" [style.display]="FullName.invalid ? 'flex' : 'none'">
+            <div *ngIf="FullName.invalid || FullName.errors?.required || FullName.errors?.minlength || FullName.errors?.maxlength" class="error-message"
+                 [style.display]="FullName.invalid ? 'flex' : 'none'">
+              Please enter at least 6 chars, and 200 chars maximum limit.
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 form-group">
+          <input type="email" class="form-control" name="Email" id="email" placeholder="Your Email"
+                 [(ngModel)]="BookingItem.Email" #Email="ngModel"
+                 minlength="5" maxlength="400" />
+          <div class="validate" [style.display]="Email.invalid ? 'flex' : 'none'">
+            <div *ngIf="Email.invalid || Email.errors?.required || Email.errors?.minlength || Email.errors?.maxlength" class="error-message"
+                 [style.display]="Email.invalid ? 'flex' : 'none'">
+              Please enter at least 1 chars, and 400 chars maximum limit.
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 form-group">
+          <input type="text" class="form-control" name="PhoneOrMobile" id="phone" placeholder="Your Phone"
+                 [(ngModel)]="BookingItem.PhoneOrMobile" #PhoneOrMobile="ngModel"
+                 minlength="8" maxlength="200" />
+          <div class="validate" [style.display]="PhoneOrMobile.invalid ? 'flex' : 'none'">
+            <div *ngIf="PhoneOrMobile.invalid || PhoneOrMobile.errors?.required || PhoneOrMobile.errors?.minlength || PhoneOrMobile.errors?.maxlength" class="error-message"
+                 [style.display]="PhoneOrMobile.invalid ? 'flex' : 'none'">
+              Please enter at least 8 chars, and 200 chars maximum limit.
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 form-group">
+          <input type="text" name="Date" class="form-control" id="date" placeholder="Date"
+                 [(ngModel)]="BookingItem.Date" #Date="ngModel" required
+                 minlength="8" maxlength="200" />
+          <div class="validate" [style.display]="Date.invalid ? 'flex' : 'none'">
+            <div *ngIf="Date.invalid || Date.errors?.required || Date.errors?.minlength || Date.errors?.maxlength" class="error-message"
+                 [style.display]="Date.invalid ? 'flex' : 'none'">
+              Please enter at least 10 chars, and 10 chars maximum limit.
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 form-group">
+          <input type="time" name="Time" class="form-control" id="time" placeholder="Time"
+                 [(ngModel)]="BookingItem.Time" #Time="ngModel" required
+                 minlength="5" maxlength="8" />
+          <div class="validate" [style.display]="Time.invalid ? 'flex' : 'none'">
+            <div *ngIf="Time.invalid || Time.errors?.required || Time.errors?.minlength || Time.errors?.maxlength" class="error-message"
+                 [style.display]="Time.invalid ? 'flex' : 'none'">
+              Please enter at least 5 chars, and 8 chars maximum limit.
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 form-group">
+          <input type="number" class="form-control" name="Persons" id="people" placeholder="# of people"
+                 [(ngModel)]="BookingItem.Persons" #Persons="ngModel" required
+                 minlength="8" maxlength="200" />
+          <div class="validate" [style.display]="Persons.invalid ? 'flex' : 'none'">
+            <div *ngIf="Persons.invalid || Persons.errors?.required || Persons.errors?.minlength || Persons.errors?.maxlength" class="error-message"
+                 [style.display]="Persons.invalid ? 'flex' : 'none'">
+              Please enter at least 1 char, and 255 chars maximum limit.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <textarea class="form-control" name="Message" rows="5"
+                  [(ngModel)]="BookingItem.Message" #Message="ngModel" placeholder="Message"
+                  minlength="1" maxlength="65535"></textarea>
+        <div class="validate" [style.display]="Message.invalid ? 'flex' : 'none'">
+          <div *ngIf="Message.invalid || Message.errors?.required || Message.errors?.minlength || Message.errors?.maxlength" class="error-message"
+               [style.display]="Message.invalid ? 'flex' : 'none'">
+            Please enter at least 1 chars, and 65535 chars maximum limit.
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <div class="loading">Loading</div>
+        <div class="error-message" [style.display]="Error ? 'flex' : 'none'">{{ErrorMessage}}</div>
+        <div class="sent-message" [style.display]="Status ? 'flex' : 'none'">{{StatusMessage}}</div>
+      </div>
+      <div class="text-center"><button type="submit" [disabled]="booking.form.invalid">Book a Table</button></div>
+    </form>
+
+  </div>
+</section><!-- End Book A Table Section -->

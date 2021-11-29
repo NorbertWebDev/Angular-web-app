@@ -1,0 +1,15 @@
+License for parts what are not parts of the Restaurantly Bootstrap template:
+---------------------------------------------------------------------------
+
+Following information only restricted for anything what is not part of the 
+Restaurantly Bootstrap template. What are not parts of the template were 
+created and written by me( Norbert Kovács ). 
+
+
+The software is provided "as is", without warranty of any kind, express or
+implied, including but not limited to the warranties of merchantability,
+fitness for a particular purpose and noninfringement. in no event shall the
+authors or copyright holders be liable for any claim, damages or other
+liability, whether in an action of contract, tort or otherwise, arising from,
+out of or in connection with the software or the use or other dealings in the
+software. Using any of this at your own risk!

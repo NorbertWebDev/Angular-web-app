@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html lang="en" manifest="~/manifest/client.appcache">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>@ViewBag.Title</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="~/img/favicon.png" rel="icon">
+  <link href="~/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+  href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+  rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="~/lib/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+  <link href="~/lib/jquery-ui/jquery-ui.theme.min.css" rel="stylesheet">
+  <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="~/lib/icofont/icofont.min.css" rel="stylesheet">
+  <link href="~/lib/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="~/lib/animate.css/animate.min.css" rel="stylesheet">
+  <link href="~/lib/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="~/lib/venobox/venobox.css" rel="stylesheet">
+  <link href="~/lib/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="~/css/site.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Restaurantly - v1.1.0
+  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+<cache enabled="true" expires-after="@TimeSpan.FromSeconds(30)" expires-sliding="@TimeSpan.FromSeconds(5)">
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex">
+      <div class="contact-info mr-auto">
+        <i class="icofont-phone"></i> +1 0000 00000 00
+        <span class="d-none d-lg-inline-block"><i class="icofont-clock-time icofont-rotate-180"></i> Mon-Sat: 11:00 AM -
+          23:00 PM</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo mr-auto">@ViewBag.CompanyName</h1>
+</cache>
+
+<cache enabled="false">
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <!-- Set the active item in the navigation menu -->
+          @{
+            if ( ViewBag.Location == "Home")
+            {
+              <li class="active"><a asp-controller="Home" asp-action="Home">Home</a></li>
+            }
+            else
+            {
+              <li><a asp-controller="Home" asp-action="Home">Home</a></li>
+            }
+
+            if ( ViewBag.Location == "About")
+            {
+              <li class="active"><a asp-controller="About" asp-action="About">About</a></li>
+            }
+            else
+            {
+                  <li><a asp-controller="About" asp-action="About">About</a></li>
+            }
+
+            if ( ViewBag.Location == "Menu")
+            {
+              <li class="active"><a asp-controller="Menu" asp-action="Menu">Menu</a></li>
+            }
+            else
+            {
+                  <li><a asp-controller="Menu" asp-action="Menu">Menu</a></li>
+            }
+
+            if ( ViewBag.Location == "Specials")
+            {
+              <li class="active"><a asp-controller="Specials" asp-action="Specials">Specials</a></li>
+            }
+            else
+            {
+                  <li><a asp-controller="Specials" asp-action="Specials">Specials</a></li>
+            }
+
+            if ( ViewBag.Location == "Events")
+            {
+              <li class="active"><a asp-controller="Events" asp-action="Events">Events</a></li>
+            }
+            else
+            {
+                  <li><a asp-controller="Events" asp-action="Events">Events</a></li>
+            }
+
+            if ( ViewBag.Location == "Gallery")
+            {
+              <li class="active"><a asp-controller="Gallery" asp-action="Gallery">Gallery</a></li>
+            }
+            else
+            {
+              <li><a asp-controller="Gallery" asp-action="Gallery">Gallery</a></li>
+            }
+
+            if ( ViewBag.Location == "Chefs")
+            {
+              <li class="active"><a asp-controller="Chefs" asp-action="Chefs">Chefs</a></li>
+            }
+            else
+            {
+                  <li><a asp-controller="Chefs" asp-action="Chefs">Chefs</a></li>
+            }
+
+            if ( ViewBag.Location == "Contact")
+            {
+              <li class="active"><a asp-controller="Contact" asp-action="Contact">Contact</a></li>
+            }
+            else
+            {
+                  <li><a asp-controller="Contact" asp-action="Contact">Contact</a></li>
+            }
+          }
+          <li class="book-a-table text-center"><a asp-controller="Booking" asp-action="Booking">Book a table</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+</cache>
+
+<cache enabled="true" expires-after="@TimeSpan.FromSeconds(30)" expires-sliding="@TimeSpan.FromSeconds(5)">
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+</cache>
+    @RenderBody()
+<cache enabled="true" expires-after="@TimeSpan.FromSeconds(30)" expires-sliding="@TimeSpan.FromSeconds(5)">
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>Restaurantly</h3>
+              <p>
+                A108 Adam Street <br>
+                NY 535022, USA<br><br>
+                <strong>Phone:</strong> +1 5589 55488 55<br>
+                <strong>Email:</strong> info@example.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="Home">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a asp-controller="About" asp-action="About">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="Home">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="Home">Terms of service</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="Home">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="Home">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="Home">Web Development</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="Home">Product Management</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="Home">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a asp-controller="Home" asp-action="Home">Graphic Design</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        <!-- Get the name of the company -->
+        &copy; Copyright <strong><span>@ViewBag.CompanyName</span></strong> All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/restaurantly-restaurant-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="~/lib/jquery/jquery.min.js" differ></script>
+  <script src="~/lib/jquery-ui/jquery-ui.min.js" differ></script>
+  <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js" differ></script>
+  <script src="~/lib/jquery.easing/jquery.easing.min.js" differ></script>
+  <script src="~/lib/php-email-form/validate.js" differ></script>
+  <script src="~/lib/owl.carousel/owl.carousel.min.js" differ></script>
+  <script src="~/lib/isotope-layout/isotope.pkgd.min.js" differ></script>
+  <script src="~/lib/venobox/venobox.min.js" differ></script>
+  <script src="~/lib/aos/aos.js" differ></script>
+
+  <!-- Template Main JS File -->
+  <script src="~/js/site.js" differ></script>
+</cache>
+
+  @RenderSection("Scripts", required: false)
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!-- ======= Menu Section ======= -->
+<section id="menu" class="menu section-bg">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Menu</h2>
+      <p>Check Our Tasty Menu</p>
+    </div>
+
+    <p [style.display]="Error ? 'flex' : 'none'">{{EmptyMenu}}</p>
+
+    <div class="row menu-container" style="height: auto;">
+      <!-- Get menu from database -->
+      <div *ngIf="!Error" [style.display]="!Error ? 'contents' : 'none'">
+        <div *ngFor="let Item of Menu" class="col-lg-6 menu-item filter-{{Item[4]}}">
+          <img src="{{Item[0]}}" class="menu-img" alt="">
+          <div class="menu-content">
+            <a href="#">{{Item[1]}}</a><span>${{Item[2]}}</span>
+          </div>
+          <div class="menu-ingredients">
+            {{Item[3]}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Menu Section -->
