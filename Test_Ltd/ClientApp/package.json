@@ -29,7 +29,7 @@
     "isotope": "^1.0.0-alpha.3",
     "isotope-layout": "^3.0.6",
     "jquery": "^3.5.1",
-    "jquery-ui": "^1.12.1",
+    "jquery-ui": "^1.13.0",
     "jquery.easing": "^1.4.1",
     "ng-form-group": "^1.4.2",
     "oidc-client": "^1.9.1",
